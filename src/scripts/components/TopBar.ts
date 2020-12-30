@@ -40,6 +40,10 @@ export class TopBar extends LitElement {
       text: "Contact",
       href: "/contact",
     },
+    {
+      text: "Github Search",
+      href: "/github-usersearch",
+    },
   ];
 
   menuItemsTemplate(menuItems) {

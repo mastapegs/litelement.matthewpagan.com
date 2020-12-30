@@ -3,6 +3,7 @@ import { Router } from "@vaadin/router";
 import '../pages/HomePage'
 import '../pages/AboutPage'
 import '../pages/ContactPage'
+import '../pages/SearchPage'
 
 @customElement("app-router")
 export class TopBar extends LitElement {
@@ -13,6 +14,7 @@ export class TopBar extends LitElement {
       { path: "/", component: "home-page" },
       { path: "/about", component: "about-page" },
       { path: "/contact", component: "contact-page" },
+      { path: "/github-usersearch", component: "search-page" },
     ]);
   }
 
