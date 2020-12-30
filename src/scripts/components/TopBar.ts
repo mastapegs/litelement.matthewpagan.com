@@ -1,4 +1,4 @@
-import { LitElement, html, css, customElement } from "lit-element";
+import { LitElement, html, css, customElement, property } from "lit-element";
 import resetList from "../styles/reset-list";
 import flex from "../styles/flex";
 import anchorReset from "../styles/anchor-reset";
@@ -25,13 +25,36 @@ export class TopBar extends LitElement {
     ];
   }
 
+  @property({ type: Array }) menuItems = [
+    {
+      text: "Home",
+      href: "/",
+    },
+    {
+      text: "About",
+      href: "/about",
+    },
+    {
+      text: "Contact",
+      href: "/contact",
+    },
+  ];
+
+  menuItemsTemplate(menuItems) {
+    return menuItems.map(
+      ({ text, href }) => html`
+        <li>
+          <a class="anchor-reset" style="color: white;" href=${href}>${text}</a>
+        </li>
+      `
+    );
+  }
+
   render() {
     return html`
       <nav>
         <ul class="reset-list flex">
-          <li><a class="anchor-reset" style="color: white;" href="/">Home</a></li>
-          <li><a class="anchor-reset" href="/about">About</a></li>
-          <li><a class="anchor-reset" href="/contact">Contact</a></li>
+          ${this.menuItemsTemplate(this.menuItems)}
         </ul>
       </nav>
     `;
