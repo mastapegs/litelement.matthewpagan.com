@@ -10,8 +10,6 @@ export class AppComponent extends LitElement {
       <div>
         <app-router></app-router>
       </div>
-      <h1>Lit Github Search</h1>
-      <p>Implementing Github User Search with LitElement</p>
     `;
   }
 }
