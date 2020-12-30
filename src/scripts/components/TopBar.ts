@@ -2,6 +2,7 @@ import { LitElement, html, css, customElement, property } from "lit-element";
 import resetList from "../styles/reset-list";
 import flex from "../styles/flex";
 import anchorReset from "../styles/anchor-reset";
+import textColor from "../styles/text-color";
 
 @customElement("top-bar")
 export class TopBar extends LitElement {
@@ -10,6 +11,7 @@ export class TopBar extends LitElement {
       resetList,
       flex,
       anchorReset,
+      textColor(css`white`),
       css`
         ul {
           background-color: blue;
@@ -44,7 +46,7 @@ export class TopBar extends LitElement {
     return menuItems.map(
       ({ text, href }) => html`
         <li>
-          <a class="anchor-reset" style="color: white;" href=${href}>${text}</a>
+          <a class="anchor-reset text-color" href=${href}>${text}</a>
         </li>
       `
     );
