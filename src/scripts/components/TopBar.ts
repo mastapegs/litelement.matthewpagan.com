@@ -3,12 +3,14 @@ import resetList from "../styles/reset-list";
 import flex from "../styles/flex";
 import anchorReset from "../styles/anchor-reset";
 import textColor from "../styles/text-color";
+import bigShadow from '../styles/big-shadow'
 
 @customElement("top-bar")
 export class TopBar extends LitElement {
   static get styles() {
     return [
       resetList,
+      bigShadow,
       flex,
       anchorReset,
       textColor(css`white`),
@@ -58,7 +60,7 @@ export class TopBar extends LitElement {
 
   render() {
     return html`
-      <nav>
+      <nav class="big-shadow">
         <ul class="reset-list flex">
           ${this.menuItemsTemplate(this.menuItems)}
         </ul>

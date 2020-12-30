@@ -4,8 +4,18 @@ export default css`
   .container {
     background-color: white;
     padding: 1em;
-    width: 80%;
-    margin: 1em auto;
+    margin: 2em auto;
     border-radius: 10%;
+    width: 80%;
+  }
+  @media screen and (min-width: 720px) {
+    .container {
+      width: 70%;
+    }
+  }
+  @media screen and (min-width: 1080px) {
+    .container {
+      width: 60%;
+    }
   }
 `;
