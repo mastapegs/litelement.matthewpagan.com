@@ -7,6 +7,5 @@ export default css`
     width: 80%;
     margin: 1em auto;
     border-radius: 10%;
-    box-shadow: 3px 5px 10px hsla(0, 0%, 50%, 0.5);
   }
 `;
