@@ -12,6 +12,7 @@ export class AboutPage extends LitElement {
     event.preventDefault();
     alert(this.user);
     this.user = "";
+    alert(process.env.TEST_VAR);
   }
 
   render() {
