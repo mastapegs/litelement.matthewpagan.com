@@ -48,7 +48,7 @@ export class TopBar extends LitElement {
     },
   ];
 
-  menuItemsTemplate(menuItems) {
+  menuItemsTemplate(menuItems: { text: string; href: string; }[]) {
     return menuItems.map(
       ({ text, href }) => html`
         <li>

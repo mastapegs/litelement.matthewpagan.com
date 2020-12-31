@@ -4,11 +4,11 @@ import { LitElement, property, html, customElement } from "lit-element";
 export class AboutPage extends LitElement {
   @property() user = "";
 
-  handleUserChange(event) {
+  handleUserChange(event: { target: { value: string; }; }) {
     this.user = event.target.value;
   }
 
-  handleFormSubmit(event) {
+  handleFormSubmit(event: { preventDefault: () => void; }) {
     event.preventDefault();
     alert(this.user);
     this.user = "";

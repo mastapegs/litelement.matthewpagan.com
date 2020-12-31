@@ -8,7 +8,7 @@ import("../pages/SearchPage").then();
 @customElement("app-router")
 export class TopBar extends LitElement {
   firstUpdated() {
-    const outlet = this.shadowRoot.getElementById("outlet");
+    const outlet = this.shadowRoot?.getElementById("outlet");
     const router = new Router(outlet);
     router.setRoutes([
       {
