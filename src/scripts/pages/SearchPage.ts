@@ -8,17 +8,25 @@ export class AboutPage extends LitElement {
     this.user = event.target.value;
   }
 
+  handleFormSubmit(event) {
+    event.preventDefault();
+    alert(this.user);
+    this.user = "";
+  }
+
   render() {
     return html`
       <h1>Github User Search</h1>
-      <div>
-        <label for="user">User:</label>
-        <input
-          id="user"
-          .value="${this.user}"
-          @input="${this.handleUserChange}"
-        />
-      </div>
+      <form @submit="${this.handleFormSubmit}">
+        <div>
+          <label for="user">User:</label>
+          <input
+            id="user"
+            .value="${this.user}"
+            @input="${this.handleUserChange}"
+          />
+        </div>
+      </form>
       <p>User: ${this.user}</p>
     `;
   }
