@@ -18,6 +18,6 @@
     "start": "yarn run clean && parcel src/html/index.html",
     "build": "yarn run clean && parcel build src/html/index.html src/html/**/*.html",
     "serve": "yarn run clean && yarn run build && http-server --port 1234 dist",
-    "clean": "rimraf dist .cache"
+    "clean": "rimraf dist"
   }
 }
