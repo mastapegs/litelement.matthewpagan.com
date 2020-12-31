@@ -1,9 +1,16 @@
-import { LitElement, html, css, customElement, property } from "lit-element";
+import {
+  LitElement,
+  html,
+  css,
+  customElement,
+  property,
+  TemplateResult,
+} from "lit-element";
 import resetList from "../styles/reset-list";
 import flex from "../styles/flex";
 import anchorReset from "../styles/anchor-reset";
 import textColor from "../styles/text-color";
-import bigShadow from '../styles/big-shadow'
+import bigShadow from "../styles/big-shadow";
 
 @customElement("top-bar")
 export class TopBar extends LitElement {
@@ -48,7 +55,9 @@ export class TopBar extends LitElement {
     },
   ];
 
-  menuItemsTemplate(menuItems: { text: string; href: string; }[]) {
+  menuItemsTemplate(
+    menuItems: { text: string; href: string }[]
+  ): TemplateResult[] {
     return menuItems.map(
       ({ text, href }) => html`
         <li>
